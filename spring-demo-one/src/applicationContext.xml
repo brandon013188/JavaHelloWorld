@@ -13,7 +13,11 @@
 
        <!-- Define the dependency -->
        <bean id="myFortuneService"
-        class="com.spring.demo.fortune_service.HappyFortuneService">
+            class="com.spring.demo.fortune_service.HappyFortuneService">
+       </bean>
+
+       <bean id="myRandomFortuneService"
+             class="com.spring.demo.fortune_service.RandomFortuneService">
        </bean>
 
        <!--Constructor Injection-->
@@ -27,7 +31,7 @@
        <bean id="myCricketCoach"
               class="com.spring.demo.coach.CricketCoach">
             <!-- Set up setter injection -->
-            <property name="fortuneService" ref="myFortuneService"/>
+            <property name="fortuneService" ref="myRandomFortuneService"/>
             <!-- Inject literal values -->
             <!--<property name="emailAddress" value="theBestCoach@luv2code.com"/>-->
             <!--<property name="team" value="Sunrisers Hyderabad" />-->
