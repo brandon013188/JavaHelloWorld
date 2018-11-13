@@ -1,15 +1,21 @@
 package com.spring.demo.coach;
 
 import com.spring.demo.fortune_service.FortuneService;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 import lombok.Setter;
-import org.springframework.lang.NonNull;
 
 @NoArgsConstructor
+@Getter
+@Setter
 public class CricketCoach implements Coach {
     @NonNull
-    @Setter
     private FortuneService fortuneService;
+    @NonNull
+    private String emailAddress;
+    @NonNull
+    private String team;
 
     @Override
     public String getDailyWorkout() {
