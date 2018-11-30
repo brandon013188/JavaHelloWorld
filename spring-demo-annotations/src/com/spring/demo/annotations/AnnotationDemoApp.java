@@ -1,5 +1,6 @@
 package com.spring.demo.annotations;
 
+import com.spring.demo.annotations.coach.Coach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**

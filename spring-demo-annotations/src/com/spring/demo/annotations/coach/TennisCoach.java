@@ -1,5 +1,7 @@
-package com.spring.demo.annotations;
+package com.spring.demo.annotations.coach;
 
+import com.spring.demo.annotations.fortuneservice.FortuneService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,11 +15,25 @@ import org.springframework.stereotype.Component;
 @Component // bean id: tennisCoach
 public class TennisCoach implements Coach {
 
+    private FortuneService fortuneService;
+    
+    public TennisCoach (FortuneService fortuneService) {
+        this.fortuneService = fortuneService;
+    }
+
     /**
      * {@inheritDoc}
      */
     @Override
     public String getDailyWorkout() {
         return "Practice your backhand volley";
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String getDailyFortune() {
+        return this.fortuneService.getFortune();
     }
 }
