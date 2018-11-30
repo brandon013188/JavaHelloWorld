@@ -8,7 +8,9 @@ import org.springframework.stereotype.Component;
  * @author liguanch
  *
  */
-@Component("thatSillyCoach") // bean id: thatSillyCoach
+//@Component("thatSillyCoach") // bean id: thatSillyCoach
+// Note: Default bean id: the classname with the first letter lower-case.
+@Component // bean id: tennisCoach
 public class TennisCoach implements Coach {
 
     /**
