@@ -16,7 +16,9 @@ import org.springframework.stereotype.Component;
 public class TennisCoach implements Coach {
 
     private FortuneService fortuneService;
-    
+
+    // Constructor injection with Autowired annotation
+    @Autowired
     public TennisCoach (FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
